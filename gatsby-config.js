@@ -124,7 +124,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-s3`,
       options: {
-        bucketName: "blog.woohm404.com",
+        bucketName: "blog-woohm404-com",
       },
     },
   ],
