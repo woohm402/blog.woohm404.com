@@ -47,6 +47,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "deploy": "gatsby-plugin-s3 deploy",
+    "invalidate": "aws cloudfront create-invalidation --distribution-id E34DXEH7EUQF8Y --paths '/*'",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
   }
 }
