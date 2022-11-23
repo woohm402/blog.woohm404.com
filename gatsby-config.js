@@ -9,15 +9,15 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `blog.woohm404.com`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `우현민`,
+      summary: `이유에 집착하는 개발자입니다.`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    siteUrl: `https://blog.woohm404.com`,
     social: {
-      twitter: `kylemathews`,
+      github: `woohm402`,
     },
   },
   plugins: [
@@ -76,15 +76,15 @@ module.exports = {
         feeds: [
           {
             serialize: ({ query: { site, allMarkdownRemark } }) => {
-              return allMarkdownRemark.nodes.map(node => {
+              return allMarkdownRemark.nodes.map((node) => {
                 return Object.assign({}, node.frontmatter, {
                   description: node.excerpt,
                   date: node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + node.fields.slug,
                   guid: site.siteMetadata.siteUrl + node.fields.slug,
                   custom_elements: [{ "content:encoded": node.html }],
-                })
-              })
+                });
+              });
             },
             query: `{
               allMarkdownRemark(sort: {frontmatter: {date: DESC}}) {
@@ -128,4 +128,4 @@ module.exports = {
       },
     },
   ],
-}
+};
